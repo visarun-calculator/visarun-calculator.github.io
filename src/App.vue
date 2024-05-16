@@ -20,11 +20,12 @@ export default {
   <header class="py-3 border-bottom mb-3">
     <div class="container">
       <div class="row d-flex align-items-center">
-        <div class="col-xl-3">
+		
+        <div class="col-md-3 col-12 text-center text-md-start">
           <img src="@/assets/logo/logo.png" alt="Visarun logo" height="70">
         </div>
-        <h1 class="col-xl-6 text-center">Калькулятор визарана в Сербии</h1>
-        <ul class=" col-xl-3 d-flex justify-content-end nav nav-pills">
+        <h1 class="title col-md-6 col-12 text-center">Калькулятор визарана в Сербии</h1>
+        <ul class=" col-md-3 col-12 d-flex justify-content-md-end justify-content-center nav nav-pills">
           <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Калькулятор </a></li>
           <!-- <li class="nav-item"><a href="#" class="nav-link">Инфорамация</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Памятка</a></li> -->
@@ -35,7 +36,7 @@ export default {
   </header>
 
   <main class="container">
-    <Calculator class="col-xl-6 offset-xl-3 mt-5" @dateOfVisarun="change" ref="calculator"></Calculator>
+    <Calculator class="col-md-6 offset-md-3 mt-5" @dateOfVisarun="change" ref="calculator"></Calculator>
     <div class="col-xl-8 offset-xl-2 mt-5">
 		<transition name="fade">
 			<div v-if="info">
@@ -99,7 +100,7 @@ export default {
   </footer>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .show_info {
 	background-color: #1faa49;
 	box-shadow: rgb(0,0,0,0.8) 5px 5px 0px 0px;
@@ -124,6 +125,34 @@ export default {
 		color: red;
 		text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
              1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+	}
+}
+@media screen and (max-width: 992px) {
+	.title {
+		font-size: 1.7rem;
+	}
+}
+@media screen and (max-width: 676px) {
+	.title {
+		font-size: 1.5rem;
+	}
+	.show_info {
+		font-size: 1.8rem;
+	}
+}
+@media screen and (max-width: 500px) {
+	.show_info {
+		font-size: 1.5rem;
+	}
+}
+@media screen and (max-width: 430px) {
+	.show_info {
+		font-size: 1.2rem;
+	}
+}
+@media screen and (max-width: 360px) {
+	.show_info {
+		font-size: 1rem;
 	}
 }
 

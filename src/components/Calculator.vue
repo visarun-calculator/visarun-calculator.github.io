@@ -70,7 +70,7 @@ export default {
 <template>
     <div class='calculator__wrapper h5'>
         <label for="calculator">Дата въезда в Сербию: </label>
-        <VueDatePicker v-model="date"
+        <VueDatePicker v-model="date" class="mt-1"
             id='calculator'
             multi-calendars
             text-input
@@ -84,22 +84,35 @@ export default {
     </div>
 </template>
 <style lang="scss">
+.calculator__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    #calculator {
+        max-width: 300px;
+    }
+
+    label {
+        width: fit-content;
+        text-wrap: nowrap;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 676px) {
     .calculator__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
         label {
-            width: fit-content;
-            text-wrap: nowrap;
-            margin-right: 20px;
+            width: 300px;
+            margin: 0;
+            text-align: left;
         }
     }
+}
 
-    
-
-    :root {
-        /*General*/
-        --dp-font-family: -apple-system, blinkmacsystemfont, "Oswald", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
-    }
+:root {
+    /*General*/
+    --dp-font-family: -apple-system, blinkmacsystemfont, "Oswald", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
+}
 </style>

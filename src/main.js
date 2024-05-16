@@ -20,6 +20,6 @@ const app = createApp(App).component('font-awesome-icon', FontAwesomeIcon)
 
 // Google Analitics
 app.use(VueGtag, {
-        config: { id: "G-BW1NYGS63B" }
+        config: { id: "G-K33155H8HG" }
     })
 app.mount('#app')
