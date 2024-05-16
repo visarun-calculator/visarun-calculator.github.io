@@ -30,7 +30,7 @@ export default {
         dateOfRun(){
             if (!this.date) { return null }
             let newDate = new Date(this.date)
-                newDate.setDate(newDate.getDate() + 29)
+            newDate.setDate(newDate.getDate() + 29)
             return newDate
         },
         info(){
@@ -43,10 +43,11 @@ export default {
     },
     methods: {
         calcDays(){
+            this.$gtag.event('calcDays', { method: 'Google' })
             var date1 = new Date();
             var date2 = new Date(this.dateOfRun);
             var timeDiff = date2.getTime() - date1.getTime();
-            var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)) + 1;
+            var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
            return diffDays;
         },
 		formatDate(date, addDays=0, addMonths=1, userFriendly=false){
@@ -58,7 +59,7 @@ export default {
 			
 			if (userFriendly){
 				m = this.months[date.getMonth()]
-				let wd = this.days[date.getDay()]
+				let wd = this.days[date.getDay()-1]
 				return `${wd}, ${d} ${m} ${date.getFullYear()}`
 			}
 			return `${d}.${m}.${date.getFullYear()}`
