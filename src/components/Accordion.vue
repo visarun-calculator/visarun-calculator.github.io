@@ -78,6 +78,6 @@ export default {
 </script>
 <style scoped lang="scss">
 #accordionMain {
-	font-family: 'Roboto';
+	font-family: 'Roboto', inherit, sans-serif;
 }
 </style>
