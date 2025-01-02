@@ -50,7 +50,7 @@
 			<div class="mt-2">
 				© Сайт создал
 				<a href="" style="letter-spacing: 2px; text-decoration: none">AID</a>
-				- {{ new Date().getFullYear() }}
+				2024 - {{ new Date().getFullYear() }}
 			</div>
 			<div class="mt-2">
 				<a href="https://github.com/LokkiDog" class="link-dark">
@@ -166,3 +166,4 @@ export default {
 	opacity: 0;
 }
 </style>
+
